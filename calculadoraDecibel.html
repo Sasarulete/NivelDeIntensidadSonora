@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora de NIVEL DE INTENSIDAD SONORA (dB)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>CALCULADORA DE NIVEL DE INTENSIDAD SONORA</h1>
+    <p class="subtitle">Rubén Saá — Ing. en Sonido y Acústica</p>
+
+    <form id="nis-form" novalidate>
+      <label for="intensity">Intensidad sonora (I) — en W/m²</label>
+      <div class="input-box">
+        <input id="intensity" name="intensity" inputmode="decimal" placeholder="ej. 1e-6" aria-describedby="hint" />
+      </div>
+      <div id="hint" class="hint">I<sub>ref</sub> = 1 × 10<sup>-12</sup> [ W/m² ].
+        <br>
+        Rango permitido: 1e-12 ≤ I ≤ 1</div>
+
+      <button type="button" id="calculate">Calcular</button>
+    </form>
+
+    <div id="message" role="alert" aria-live="polite"></div>
+    <div id="result" aria-live="polite" class="result"></div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
